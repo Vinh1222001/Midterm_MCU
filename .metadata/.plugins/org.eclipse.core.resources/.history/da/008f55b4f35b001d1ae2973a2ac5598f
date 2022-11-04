@@ -1,0 +1,13 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 4, 2022
+ *      Author: PC
+ */
+
+#include "global.h"
+
+enum Button{
+	TestButton =0
+};
+
