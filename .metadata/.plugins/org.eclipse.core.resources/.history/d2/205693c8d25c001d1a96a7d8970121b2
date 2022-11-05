@@ -1,0 +1,67 @@
+/*
+ * state_machine.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+#include "state_machine.h"
+
+void fsm_simple_buttons_run(){
+	switch(status){
+		case INIT:
+			status=START;
+			setTimer(1000, SwitchingAutomatinTimer);
+			break;
+		case START:
+			if(timer_flag[SwitchingAutomatinTimer]==1){
+				status=AUTOMATIC_COUNTDOWN;
+				setTimer(100, OneSecondTimer);
+			}
+
+			if(isButtonPressed(ResetButton)){
+				counter=0;
+
+			}
+
+			if(isButtonPressed(IncButton)){
+				counter++;
+				if(counter>9){
+					counter = 0;
+				}
+			}
+
+			if(isButtonPressed(DecButton)){
+				counter--;
+				if(counter<0){
+					counter=9;
+				}
+			}
+
+			display7SEG(counter);
+			break;
+		case AUTOMATIC_COUNTDOWN:
+
+			if(timer_flag[OneSecondTimer]==1){
+				if(isButtonPressed(ResetButton) || isButtonPressed(IncButton) ||isButtonPressed(DecButton)){
+					status=INIT;
+				}
+
+				if(counter>0){
+					counter--;
+					setTimer(100, OneSecondTimer);
+				}
+			}
+
+			display7SEG(counter);
+
+			break;
+		default:
+			display7SEG(404); //Led 7 Segment will display "o" if the system have error
+			break;
+
+	}
+
+
+}
+

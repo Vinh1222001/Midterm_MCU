@@ -1,7 +1,8 @@
-11:17:18 **** Incremental Build of configuration Debug for project Midterm ****
+14:00:47 **** Incremental Build of configuration Debug for project Midterm ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/state_machine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/state_machine.d" -MT"Core/Src/state_machine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state_machine.o"
 arm-none-eabi-gcc -o "Midterm.elf" @"objects.list"   -mcpu=cortex-m3 -T"V:\E-learning\MCU\Midterm\Midterm\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Midterm.elf
  
@@ -10,11 +11,11 @@ arm-none-eabi-objdump -h -S  Midterm.elf  > "Midterm.list"
 arm-none-eabi-objcopy  -O ihex  Midterm.elf  "Midterm.hex"
 arm-none-eabi-objcopy  -O binary  Midterm.elf  "Midterm.bin"
    text	   data	    bss	    dec	    hex	filename
-   7488	     40	   1672	   9200	   23f0	Midterm.elf
+   9028	     92	   1716	  10836	   2a54	Midterm.elf
 Finished building: default.size.stdout
  
-Finished building: Midterm.hex
 Finished building: Midterm.bin
+Finished building: Midterm.hex
  
  
 Finished building: Midterm.list

@@ -1,0 +1,34 @@
+/*
+ * state_machine.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+#include "state_machine.h"
+
+void fsm_simple_buttons_run(){
+
+	if(isButtonPressed(ResetButton)){
+		counter=0;
+
+	}
+
+	if(isButtonPressed(DecButton)){
+		counter++;
+		if(counter>9){
+			counter = 0;
+		}
+	}
+
+	if(isButtonPressed(IncButton)){
+		counter--;
+		if(counter<0){
+			counter=9;
+		}
+	}
+
+	display7SEG(counter);
+
+}
+

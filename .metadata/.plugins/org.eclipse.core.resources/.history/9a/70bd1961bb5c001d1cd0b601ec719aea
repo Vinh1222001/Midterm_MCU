@@ -1,0 +1,17 @@
+/*
+ * state_machine.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+#include "state_machine.h"
+
+void fsm_simple_buttons_run(){
+
+	if(isButtonPressed(ResetButton)){
+
+	}
+
+}
+

@@ -8,7 +8,9 @@ C_SRCS += \
 ../Core/Src/button.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
+../Core/Src/seven_seg_display.c \
 ../Core/Src/software_timer.c \
+../Core/Src/state_machine.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
 ../Core/Src/stm32f1xx_it.c \
 ../Core/Src/syscalls.c \
@@ -19,7 +21,9 @@ OBJS += \
 ./Core/Src/button.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
+./Core/Src/seven_seg_display.o \
 ./Core/Src/software_timer.o \
+./Core/Src/state_machine.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
 ./Core/Src/stm32f1xx_it.o \
 ./Core/Src/syscalls.o \
@@ -30,7 +34,9 @@ C_DEPS += \
 ./Core/Src/button.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \
+./Core/Src/seven_seg_display.d \
 ./Core/Src/software_timer.d \
+./Core/Src/state_machine.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
 ./Core/Src/stm32f1xx_it.d \
 ./Core/Src/syscalls.d \

@@ -7,5 +7,6 @@
 
 #include "global.h"
 
-
+int counter=5;
+int status= INIT;
 
